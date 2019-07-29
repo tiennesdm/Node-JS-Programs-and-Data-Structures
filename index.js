@@ -107,3 +107,31 @@ exports.smallerAndsecondsmaller = function(arr) {
     }
     return [smaller, secondsmaller];
 }
+exports.insertionSort = function(arr) {
+    let i, j, k;
+    for (i = 0; i < arr.length; i++) {
+        j = i;
+        key = arr[i];
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[i + 1] = key;
+    }
+    return arr;
+}
+exports.findFactorial = function(num) {
+    let fact = 1;
+    if (num == 0) {
+        return 1;
+    } else if (!isNaN(num)) {
+        if (num > 1) {
+            for (i = 1; i <= num; i++) {
+                fact = fact * i;
+            }
+        } else {
+            return false;
+        }
+    }
+    return sum;
+}
