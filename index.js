@@ -108,15 +108,16 @@ exports.smallerAndsecondsmaller = function(arr) {
     return [smaller, secondsmaller];
 }
 exports.insertionSort = function(arr) {
-    let i, j, k;
+    let i, j;
     for (i = 0; i < arr.length; i++) {
-        j = i;
+        j = i - 1;
         key = arr[i];
         while (j >= 0 && arr[j] > key) {
             arr[j + 1] = arr[j];
-            j = j - 1;
+            j--;
         }
-        arr[i + 1] = key;
+        //   console.log(arr);
+        arr[j + 1] = key;
     }
     return arr;
 }
