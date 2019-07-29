@@ -12,7 +12,18 @@
         "arraysum",
         "npm",
         "package",
-        "tiennesdm"
+        "tiennesdm",
+        "bubbleSort",
+        "insertionSort",
+        "smarllerAndSecondsmaller",
+        "largerAndsecondLarger",
+        "linearSearch",
+        "stringReverse",
+        "Palindrome",
+        "digitSum",
+        "factorialSum",
+        "stringPalindrome"
+
     ]
 
 }
