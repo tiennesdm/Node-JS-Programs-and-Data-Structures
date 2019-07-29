@@ -1,15 +1,4 @@
-module.exports = function sum(arr){
-             
-    if (toString.call(arr) !== "[object Array]")
-       return false;
-         
-               var total =  0;
-               for(var i=0;i<arr.length;i++)
-                 {                  
-                   if(isNaN(arr[i])){
-                   continue;
-                    }
-                     total += Number(arr[i]);
-                  }
-                return total;
-               }
+const index = require('./index');
+//console.log(index.bubbleSort([4, 5, 5, 1, 2, 3]));
+console.log(index.stringReverse(12));
+console.log(index.linearSearch([1, 2, 5, 7, 8], 9));
