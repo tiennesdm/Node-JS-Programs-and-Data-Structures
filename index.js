@@ -75,3 +75,35 @@ exports.stringPalindrome = function(str) {
 
 
 }
+exports.largerAndsecondlarger = function(arr) {
+    if (toString.call(arr) !== "[object Array]")
+        return false;
+    let i;
+    let larger = arr[0];
+    let secondlarger = arr[0];
+    for (i = 0; i < arr.length; i++) {
+        if (larger < arr[i]) {
+            secondlarger = larger;
+            larger = arr[i];
+        } else if (secondlarger < arr[i]) {
+            secondlarger = arr[i];
+        }
+    }
+    return [larger, secondlarger];
+
+}
+exports.smallerAndsecondsmaller = function(arr) {
+    if (toString.call(arr) !== "[object Array]")
+        return false;
+    let i, smaller = arr[0],
+        secondsmaller = arr[0];
+    for (i = 0; i < arr.length; i++) {
+        if (smaller > arr[i]) {
+            secondsmaller = smaller;
+            smaller = arr[i];
+        } else if (secondsmaller > arr[i]) {
+            secondsmaller = arr[i];
+        }
+    }
+    return [smaller, secondsmaller];
+}

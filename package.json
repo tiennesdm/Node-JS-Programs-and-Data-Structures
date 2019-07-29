@@ -1,18 +1,18 @@
 {
-  "name": "tiennesdm",
-  "version": "1.0.3",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "shubham mehta",
-  "license": "ISC",
-  "keywords": [
-    "arraysum",
-    "npm",
-    "package",
-    "tiennesdm"
-  ]
+    "name": "tiennesdm",
+    "version": "1.0.4",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "shubham mehta",
+    "license": "ISC",
+    "keywords": [
+        "arraysum",
+        "npm",
+        "package",
+        "tiennesdm"
+    ]
 
 }
