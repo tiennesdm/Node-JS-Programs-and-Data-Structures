@@ -31,7 +31,12 @@ exports.bubbleSort = function(arr) {
 
 }
 exports.stringReverse = function(str) {
-    return str.split("").reverse().join("");
+    if (isNaN(str)) {
+        return str.split("").reverse().join("");
+
+    }
+    return "This is not a string";
+
 }
 exports.linearSearch = function(arr, num) {
     for (let i = 0; i < arr.length; i++) {
@@ -40,4 +45,33 @@ exports.linearSearch = function(arr, num) {
         }
     }
     return "Not found";
+}
+exports.digitSum = function(integer) {
+    let sum = 0;
+    if (!isNaN(integer)) {
+        while (integer != 0) {
+            sum = sum + integer % 10;
+            integer = integer / 10
+        }
+        return parseInt(sum);
+
+    } else {
+        return "This is not a Number";
+
+    }
+
+}
+exports.stringPalindrome = function(str) {
+    let rev;
+    if (isNaN(str)) {
+        rev = str.split("").reverse().join("");
+
+    }
+    if (rev == str) {
+        return "This is palindrome string and its reverse is" + " " + rev;
+    } else {
+        return "This is not palindrom string";
+    }
+
+
 }
