@@ -138,61 +138,43 @@ exports.insertionSort = function(arr) {
 }
 
 exports.selectionSort = function(arr) {
-        if (arr.length < 2) {
-            return arr;
-        }
-        let i, j, min, temp;
-        for (i = 0; i < arr.length; i++) {
-            min = i;
-            for (j = i; j < arr.length; j++) {
-                if (arr[min] > arr[j]) {
-                    min = j;
-                }
-            }
-            temp = arr[min];
-            arr[min] = arr[i];
-            arr[i] = temp;
-        }
+    if (arr.length < 2) {
         return arr;
     }
-    /*exports.mergeSort = function(arr) {
-        if (arr.length < 2) {
-            return arr;
-        }
-        let mid = parseInt(arr.length / 2);
-        let leftarr = arr.slice(0, mid);
-        let rightarr = arr.slice(mid, arr.length);
-        // console.log(mid, leftarr, rightarr);
-        // console.log(merge(this.mergeSort(leftarr), this.mergeSort(rightarr)));
-        return merge(this.mergeSort(leftarr), this.mergeSort(rightarr));
-    }
-
-    function merge(leftarr, rightarr) {
-        let sortedarray = [];
-        while (leftarr.length && rightarr.length) {
-            if (leftarr[0] <= rightarr[0]) {
-                sortedarray.push(leftarr[0]);
-                leftarr = leftarr.splice(1);
-            } else {
-                sortedarray.push(rightarr[0]);
-                rightarr.splice(1);
+    let i, j, min, temp;
+    for (i = 0; i < arr.length; i++) {
+        min = i;
+        for (j = i; j < arr.length; j++) {
+            if (arr[min] > arr[j]) {
+                min = j;
             }
         }
-        //  console.log(sortedarray);
-        while (leftarr.length) {
-            sortedarray.push(leftarr.shift());
-        }
-
-        while (rightarr.length) {
-            sortedarray.push(rightarr.shift());
-        }
-
-        return sortedarray;
+        temp = arr[min];
+        arr[min] = arr[i];
+        arr[i] = temp;
     }
-    exports.anagram = function(str, str2){
-        s = str.replace(' ','').lower();
-        s2= str2.replace(' ', '').lower();
-        if(length(s)!=length(s2)){
-            return "Not anagram";
+    return arr;
+}
+exports.aramStrong = function(num) {
+    sum = 0
+    while (num > 0) {
+        rem = parseInt(num % 10);
+        sum = sum + rem * rem * rem;
+        num = parseInt(num / 10);
+
+    }
+    return sum;
+}
+exports.removeDuplicate = function(arr) {
+    arr2 = []
+    for (i = 0; i < arr.length; i++) {
+        for (j = 0; j < i; j++) {
+            if (arr[i] == arr[j]) {
+                //  delete arr[i];
+                arr.splice(i, 1);
+                // console.log(arr[i]);
+            }
         }
-    }*/
+    }
+    return arr;
+}
