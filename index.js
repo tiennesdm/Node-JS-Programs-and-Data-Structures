@@ -102,6 +102,20 @@ exports.linearSearch = function(arr, num) {
     }
     return "Not found";
 }
+exports.binarySearch = function(arr, element) {
+    first = 0;
+    last = arr.length;
+    while (first <= last) {
+        mid = parseInt((first + last) / 2);
+        if (arr[mid] == element) {
+            return mid + 1;
+        } else if (arr[mid] > element) {
+            last = mid - 1;
+        } else if (arr[mid] < element) {
+            first = mid + 1;
+        }
+    }
+}
 exports.bubbleSort = function(arr) {
     if (toString.call(arr) !== "[object Array]")
         return false;
@@ -229,18 +243,4 @@ exports.removeElementByUsingFirstAndSecodIndex = function(arr, first, second) {
         }
     }
     return temparray;
-}
-exports.binarySearch = function(arr, element) {
-    first = 0;
-    last = arr.length;
-    while (first <= last) {
-        mid = parseInt((first + last) / 2);
-        if (arr[mid] == element) {
-            return mid + 1;
-        } else if (arr[mid] > element) {
-            last = mid - 1;
-        } else if (arr[mid] < element) {
-            first = mid + 1;
-        }
-    }
 }

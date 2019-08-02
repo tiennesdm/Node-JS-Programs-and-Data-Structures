@@ -23,12 +23,4 @@ Queue.prototype.peek = function() {
     return arr;
 
 }
-que = new Queue();
-que.enqueue(3);
-que.enqueue(2);
-que.enqueue(2);
-//que.dequeue();
-//que.dequeue();
-console.log(que.front);
-//console.log(que.front());
-console.log(que.peek());
+module.exports = Queue;
