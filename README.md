@@ -8,6 +8,28 @@
 
 
 
-Array Sum Package
+Import Package
 
 `const tiennesdm = require('tiennesdm');`
+
+
+Function
+`arraySum`
+`findFactorial`
+`stringReverse`
+`digitSum`
+`stringPalindrome`
+`largerAndsecondlarger`
+`smallerAndsecondsmaller`
+`linearSearch`
+`bubbleSort`
+`insertionSort`
+`selectionSort`
+`aramStrong`
+`removeDuplicateinArray`
+`removeElmentsinArray`
+`removeByindexinArray`
+`addElementinArray`
+`getElementByUsingFirstAndSecondIndex`
+`removeElementByUsingFirstAndSecodIndex`
+
