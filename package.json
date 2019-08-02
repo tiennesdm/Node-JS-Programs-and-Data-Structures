@@ -22,7 +22,18 @@
         "Palindrome",
         "digitSum",
         "factorialSum",
-        "stringPalindrome"
+        "stringPalindrome",
+        "removeDuplicateinArray",
+        "removeElmentsinArray",
+        "removeByindexinArray",
+        "addElementinArray",
+        "getElementByUsingFirstAndSecondIndex",
+        "removeElementByUsingFirstAndSecodIndex",
+        "binarySearch"
+
+
+
+
 
     ]
 

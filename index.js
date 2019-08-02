@@ -165,7 +165,7 @@ exports.aramStrong = function(num) {
     }
     return sum;
 }
-exports.removeDuplicate = function(arr) {
+exports.removeDuplicateinArray = function(arr) {
     arr2 = []
     for (i = 0; i < arr.length; i++) {
         for (j = 0; j < i; j++) {
@@ -177,4 +177,70 @@ exports.removeDuplicate = function(arr) {
         }
     }
     return arr;
+}
+exports.removeElmentsinArray = function(arr, element) {
+    temparray = new Array();
+    count = 0;
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] != element) {
+            temparray[count] = arr[i];
+            count++;
+        }
+    }
+    //console.log(count);
+    return temparray;
+}
+exports.removeByindexinArray = function(arr, index) {
+    temparray = new Array();
+    count = 0;
+    for (i = 0; i < arr.length; i++) {
+        if (i != index) {
+            temparray[count] = arr[i];
+            count++
+        }
+    }
+    return temparray;
+}
+exports.addElementinArray = function(arr, element) {
+    arr[arr.length] = element;
+    return arr;
+}
+exports.getElementByUsingFirstAndSecondIndex = function(arr, first, second) {
+    temparray = new Array();
+    count = 0;
+    for (i = 0; i < arr.length; i++) {
+        if (i == first && first <= second) {
+            temparray[count] = arr[i];
+            first++;
+            count++;
+        }
+    }
+    return temparray;
+}
+exports.removeElementByUsingFirstAndSecodIndex = function(arr, first, second) {
+    temparray = new Array();
+    count = 0;
+    for (i = 0; i < arr.length; i++) {
+        if (i == first && first <= second) {
+            first++;
+        } else {
+            temparray[count] = arr[i];
+            count++;
+        }
+    }
+    return temparray;
+}
+exports.binarySearch = function(arr, element) {
+    first = 0;
+    last = arr.length;
+    while (first <= last) {
+        mid = parseInt((first + last) / 2);
+        if (arr[mid] == element) {
+            return mid + 1;
+        } else if (arr[mid] > element) {
+            last = mid - 1;
+        } else if (arr[mid] < element) {
+            first = mid + 1;
+        }
+    }
 }
