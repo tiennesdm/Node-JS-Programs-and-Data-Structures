@@ -1,5 +1,5 @@
-# tiennesdm-npm-package-build
-[![GitHub issues](https://img.shields.io/github/issues/tiennesdm/tiennesdm-npm-package-build.svg?label=sum)](https://github.com/tiennesdm/tiennesdm-npm-package-build/issues)
+# tiennesdm-npm
+[![GitHub issues](https://img.shields.io/github/forks/tiennesdm/tiennesdm)](https://github.com/tiennesdm/tiennesdm/issues)
 
 
 
@@ -13,9 +13,9 @@ Import Package
 `const tiennesdm = require('tiennesdm');`
 
 
-Function
-`arraySum`
-`findFactorial`
+Functions <br>
+`arraySum` 
+`findFactorial` 
 `stringReverse`
 `digitSum`
 `stringPalindrome`
@@ -32,4 +32,16 @@ Function
 `addElementinArray`
 `getElementByUsingFirstAndSecondIndex`
 `removeElementByUsingFirstAndSecodIndex`
-
+`interChangeDigit`
+`sumofNseries`
+`findTermofAP`
+`SquareofArrayNumber`
+`cubeofArrayNumber`
+`SquareNumber`
+`cubeNumber`
+`frequencyCounter`,
+`stringCharacter`,
+`anagram`,
+`mergeTwoArray`,
+`countUniqueValues`,
+`sumZeroNaive`

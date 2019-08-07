@@ -36,4 +36,5 @@ Stack.prototype.peek = function() {
     return arr;
 
 }
+
 module.exports = Stack;

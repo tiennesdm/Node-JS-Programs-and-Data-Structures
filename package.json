@@ -1,6 +1,6 @@
 {
     "name": "tiennesdm",
-    "version": "1.0.7",
+    "version": "1.0.9",
     "description": "",
     "main": "app.js",
     "scripts": {
@@ -29,7 +29,25 @@
         "addElementinArray",
         "getElementByUsingFirstAndSecondIndex",
         "removeElementByUsingFirstAndSecodIndex",
-        "binarySearch"
+        "binarySearch",
+        "interChangeDigit",
+        "sumofNseries",
+        "findTermofAP",
+        "SquareofArrayNumber",
+        "cubeofArrayNumber",
+        "SquareNumber",
+        "cubeNumber",
+        "frequencyCounter",
+        "stringCharacter",
+        "anagram",
+        "mergeTwoArray",
+        "countUniqueValues",
+        "sumZeroNaive"
+
+
+
+
+
     ]
 
 }

@@ -29,11 +29,24 @@ exports.findFactorial = function(num) {
 }
 
 exports.stringReverse = function(str) {
-    if (isNaN(str)) {
-        return str.split("").reverse().join("");
+    rev = '';
+    letter = [];
+    count = 0;
+    /* if (isNaN(str)) {
+         return str.split("").reverse().join("");
+
+     }*/
+    for (i = 0; i < str.length; i++) {
+        letter[count] = str[i];
+        count++;
+    }
+    for (j = 0; j < str.length; j++) {
+        count--;
+        rev = rev + letter[count];
 
     }
-    return "This is not a string";
+    return rev;
+    // return "This is not a string";
 
 }
 exports.digitSum = function(integer) {
@@ -243,4 +256,138 @@ exports.removeElementByUsingFirstAndSecodIndex = function(arr, first, second) {
         }
     }
     return temparray;
+}
+exports.interChangeDigit = function(number) {
+    arr = [];
+    count = 0;
+    let interchange = '';
+    if (!isNaN(number)) {
+        while (number > 0) {
+            z = parseInt(number % 10);
+            arr[count] = z;
+            number = parseInt(number / 10);
+            count++;
+        }
+
+    }
+    for (i = 0; i < arr.length; i++) {
+        // console.log(arr[i]);
+        interchange += parseInt('' + arr[i]);
+    }
+    return interchange;
+
+}
+exports.sumofNseries = function(n, first, last) {
+    return parseInt((n * parseInt(first + last) / 2));
+
+}
+exports.findTermofAP = function(n, a1, d) {
+    return parseInt(a1 + (n - 1) * d);
+}
+exports.SquareofArrayNumber = function(arr) {
+    newarr = [];
+    count = 0;
+    for (i = 0; i < arr.length; i++) {
+        newarr[count] = arr[i] * arr[i];
+        count++;
+    }
+    return newarr;
+
+}
+exports.cubeofArrayNumber = function(arr) {
+    newarr = [];
+    count = 0;
+    for (i = 0; i < arr.length; i++) {
+        newarr[count] = arr[i] * arr[i] * arr[i];
+        count++;
+    }
+    return newarr;
+}
+exports.SquareNumber = function(number) {
+    return number * number;
+}
+exports.cubeNumber = function(number) {
+    return number * number * number;
+}
+exports.frequencyCounter = function(arr1, arr2) {
+    if (arr1.length != arr2.length) {
+        return false;
+    }
+    frequencyCounter1 = {};
+    frequencyCounter2 = {};
+    for (let val in arr1) {
+        frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1;
+    }
+    for (let val in arr2) {
+        frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1;
+    }
+    for (let key in frequencyCounter1) {
+        if (!(key ** 2 in frequencyCounter2)) {
+            return false;
+        }
+        if (frequencyCounter2[key ** 2] !== frequencyCounter1[key]) {
+            return false;
+        }
+    }
+    return true;
+}
+exports.stringCharacter = function(str) {
+    lookup = {};
+    for (i = 0; i < str.length; i++) {
+        lookup[str[i]] ? lookup[str[i]] += 1 : lookup[str[i]] = 1;
+    }
+    return lookup;
+}
+exports.anagram = function(str1, str2) {
+    lookup = {};
+    if (str1.length != str2.length) {
+        return false;
+    }
+    for (i = 0; i < str1.length; i++) {
+        lookup[str1[i]] ? lookup[str1[i]] += 1 : lookup[str1[i]] = 1;
+    }
+    for (j = 0; j < str2.length; j++) {
+        if (!lookup[str2[j]]) {
+            return false;
+        } else {
+            lookup[str2[j]] -= 1;
+        }
+    }
+    return true;
+}
+exports.mergeTwoArray = function(arr1, arr2) {
+    l = arr1.length;
+    for (i = 0; i < arr2.length; i++) {
+        arr1[l] = arr2[i];
+        l++;
+    }
+    return arr1;
+}
+exports.countUniqueValues = function(arr) {
+    if (arr.length == 0) {
+        return false;
+    }
+    i = 0;
+    for (j = 1; j < arr.length; j++) {
+        if (arr[i] !== arr[j]) {
+            i++;
+            arr[i] = arr[j];
+        }
+    }
+    return i;
+}
+exports.sumZeroNaive = function(arr) {
+    newarr = [];
+    count = 0;
+    for (i = 0; i < arr.length; i++) {
+        for (j = i + 1; j < arr.length; j++) {
+            if (arr[i] + arr[j] == 0) {
+                newarr[count] = [arr[i], arr[j]];
+                count++;
+            } else {
+                return false;
+            }
+        }
+    }
+    return newarr;
 }
