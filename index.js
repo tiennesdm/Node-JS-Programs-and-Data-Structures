@@ -391,3 +391,39 @@ exports.sumZeroNaive = function(arr) {
     }
     return newarr;
 }
+exports.mergeSort = function(arr) {
+    if (arr.length <= 1) return arr;
+    let mid = Math.floor((arr.length / 2));
+    let left = this.mergeSort(arr.slice(0, mid));
+    let right = this.mergeSort(arr.slice(mid));
+    return merge(left, right);
+}
+
+function merge(arr1, arr2) {
+    count = 0;
+    let result = [];
+    let i = 0;
+    let j = 0;
+    while (i < arr1.length && j < arr2.length) {
+        if (arr2[j] > arr1[i]) {
+            result[count] = arr1[i];
+            count++;
+            i++;
+        } else {
+            result[count] = arr2[j];
+            j++;
+            count++;
+        }
+    }
+    while (i < arr1.length) {
+        result[count] = arr1[i];
+        i++;
+        count++;
+    }
+    while (j < arr2.length) {
+        result[count] = arr2[j];
+        j++;
+        count++;
+    }
+    return result;
+}
