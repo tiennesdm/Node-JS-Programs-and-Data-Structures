@@ -455,3 +455,16 @@ exports.quickSort = function(arr, start = 0, end = arr.length - 1) {
     }
     return arr;
 }
+exports.mozeZero = function(arr) {
+    let i;
+    let insertPos = 0;
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] != 0) {
+            arr[insertPos++] = arr[i];
+        }
+    }
+    while (insertPos < arr.length) {
+        arr[insertPos++] = 0;
+    }
+    return arr;
+}

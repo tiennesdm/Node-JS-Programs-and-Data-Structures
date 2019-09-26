@@ -42,7 +42,8 @@
         "anagram",
         "mergeTwoArray",
         "countUniqueValues",
-        "sumZeroNaive"
+        "sumZeroNaive",
+        "MoveZero"
 
 
 
