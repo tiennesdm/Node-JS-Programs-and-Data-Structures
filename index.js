@@ -455,7 +455,7 @@ exports.quickSort = function(arr, start = 0, end = arr.length - 1) {
     }
     return arr;
 }
-exports.mozeZero = function(arr) {
+exports.ZeroAtTheEnd = function(arr) {
     let i;
     let insertPos = 0;
     for (i = 0; i < arr.length; i++) {
@@ -467,4 +467,12 @@ exports.mozeZero = function(arr) {
         arr[insertPos++] = 0;
     }
     return arr;
+}
+exports.fibonacciNumber = function (n, fib = { 1: 0, 2: 1 }) {
+    if (n in fib) {
+        return fib[n]
+    } else {
+        fib[n] = fibonacciNumber(n - 1, fib) + fibonacciNumber(n - 2, fib)
+        return fib[n]
+    }
 }

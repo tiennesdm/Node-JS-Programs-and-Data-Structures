@@ -44,4 +44,8 @@ Functions <br>
 `anagram`,
 `mergeTwoArray`,
 `countUniqueValues`,
-`sumZeroNaive`
+`sumZeroNaive`,
+`mergeSort`,
+`quickSort`,
+`ZeroAtTheEnd`,
+`fibonacciNumber`
